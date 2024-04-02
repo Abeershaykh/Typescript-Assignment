@@ -476,7 +476,7 @@ function make_shirt(size:string, message:string) {
 // The function should print a sentence summarizing the size of the shirt and the message printed on it. Call the function.
 make_shirt('Extra Large','I am fat')
 
-// Exercise 38 Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message that reads I love TypeScript. Make a large shirt. 
+// Exercise 37 Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message that reads I love TypeScript. Make a large shirt. 
 function makeshirt(size: string='Large', message: string ='I love Typescript') {
     console.log(`You have ordered ${size} sized shirt with this message '${message}'`);
  }
@@ -486,7 +486,7 @@ makeshirt('medium',)
 // shirt of any size with a different message.
 makeshirt('small','I love myself')
 
-// Exercise 39 Cities: Write a function called describe_city() that accepts the name of a city and its country. 
+// Exercise 38 Cities: Write a function called describe_city() that accepts the name of a city and its country. 
 function describe_city(city: string, country= 'Pakistan'){
     console.log(`${city} is in ${country}`)
 }
@@ -496,7 +496,7 @@ describe_city('Lahore')
 describe_city('Peshawar')
 describe_city('Mumbai')
 
-// Exercise 40 City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this:
+// Exercise 39 City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this:
 function city_country(city: string, country: string){
     console.log(`"${city}","${country}"`);
 }
@@ -506,3 +506,35 @@ city_country('Hyderabad','Pakistan')
 city_country('Riyadh','KSA')
 city_country('Mumbai','India')
 
+// Exercise 40 Album: Write a function called make_album() that builds a Object describing a music album. //  The function should take in an artist name and an album title, and it should return a Object containing these two pieces of information.
+// Use the function to make three dictionaries representing different albums. Print each return value to show that Objects are storing the album information correctly. Add an optional parameter to make_album() that allows you to store the number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album’s Object. Make at least one new function call that includes the number of tracks on an album.
+function make_album(artistname: string, albumtitle: string, tracks?: number){
+    let album: { [key: string]: any } = {};
+    album ['artist'] = artistname;
+    album ['title']= albumtitle;
+    if (tracks!== undefined){
+        album['tracks']= tracks;
+        }
+    return album
+}
+const album1 = make_album("Weeknd", "After Hours");
+const album2 = make_album("Taylor Swift", "1989");
+const album3 = make_album("Ed Sheeran", "÷", 12);
+console.log(album1);
+console.log(album2);
+console.log(album3);
+
+// Exercise 41 Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(), which prints the name of each magician in the array.
+const magicianNames: string[] = ['Harry Potter', 'Rudolph', 'Ozil', 'KDB']
+function show_magicians(magicians: string[]){
+    for (const items of magicians){
+        console.log(items)
+    }
+}
+show_magicians(magicianNames)
+
+// Exercise 42 Great Magicians: Start with a copy of your program from Exercise 41. Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name. Call show_magicians() to see that the list has actually been modified.
+function make_great(message:string){
+    let message= 'Great'
+    }
+}
